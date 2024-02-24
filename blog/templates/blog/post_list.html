@@ -1,58 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Insights and Tips</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Photography Insights and Tips</h1>
-        <p>Welcome to our photography blog where we share insights, tips, and inspiration for photographers of all levels. From capturing the perfect shot to understanding the technicalities of your camera, we cover it all.</p>
-        
-        <h2>Landscape Photography</h2>
-        <p>Discover the art of capturing breathtaking landscapes. Learn how to use natural lighting to your advantage and compose shots that tell a story.</p>
-        <img src="placeholder" alt="Landscape Photography Placeholder">
-        
-        <h2>Portrait Photography</h2>
-        <p>Portrait photography is all about capturing the essence of a person. Learn tips on lighting, background selection, and how to make your subject feel comfortable.</p>
-        <img src="placeholder" alt="Portrait Photography Placeholder">
-        
-        <h2>Street Photography</h2>
-        <p>Street photography offers a glimpse into the everyday life of people. Learn how to capture candid moments without disrupting the natural flow of your surroundings.</p>
-        <img src="placeholder" alt="Street Photography Placeholder">
-        
-        <h2>Wildlife Photography</h2>
-        <p>Wildlife photography requires patience and skill. Discover techniques for capturing animals in their natural habitat, focusing on timing and safety.</p>
-        <img src="placeholder" alt="Wildlife Photography Placeholder">
-        
-        <h2>Night Photography</h2>
-        <p>Night photography presents unique challenges and opportunities. Learn about long exposure techniques, and how to capture stunning images under low light conditions.</p>
-        <img src="placeholder" alt="Night Photography Placeholder">
-    </div>
-</body>
+<html>
+    <header>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </header>
+    
+    {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
 </html>
