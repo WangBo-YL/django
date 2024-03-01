@@ -42,7 +42,7 @@ h1 a, h2 a {
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
-    color: #ffffff;
+    color: #000000;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -64,12 +64,16 @@ h1 a, h2 a {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: #e99781;
     background: none;
     border-color: #C25100;
 }
 
 .btn-secondary:hover {
-    color: #FFFFFF;
+    color: #e19494;
     background-color: #C25100;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
 }
